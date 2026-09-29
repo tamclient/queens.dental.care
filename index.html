@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightSmile Dental Care & Implant Centre | Complete Family Dentistry</title>
+  <meta name="description" content="Modern, painless dental care, root canal treatments, dental implants, braces, and cosmetic dentistry. Book your appointment via WhatsApp today." />
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            dental: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            medical: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Subtle pulse animation for the floating WhatsApp CTA */
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 14px rgba(34, 197, 94, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+      }
+    }
+    .whatsapp-pulse {
+      animation: pulse-ring 2.2s infinite;
+    }
+
+    /* Smooth fade transition for gallery items */
+    .gallery-item {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-dental-500 selection:text-white">
+
+  <!-- =====================================================================
+       TOP INFO BAR (EASY TO EDIT CLINIC TIMINGS & PHONE)
+       ===================================================================== -->
+  <div class="bg-dental-900 text-teal-50 text-xs sm:text-sm py-2.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-4">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-regular fa-clock text-dental-200"></i>
+          <span>Mon – Sat: 9:30 AM – 7:30 PM | Sun: By Appointment</span>
+        </span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-teal-200">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Canchipur / Main Road, Near University Gate</span>
+        </span>
+      </div>
+      <div class="flex items-center space-x-4 ml-auto sm:ml-0">
+        <!-- EDIT PHONE NUMBER HERE -->
+        <a href="tel:+919876543210" class="hover:text-white transition flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone-volume text-dental-200"></i>
+          <span>+91 98765 43210</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       STICKY NAVIGATION BAR
+       ===================================================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Clinic Brand / Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-dental-500 to-medical-600 flex items-center justify-center text-white shadow-md shadow-dental-500/20 group-hover:scale-105 transition">
+            <i class="fa-solid fa-tooth text-xl"></i>
+          </div>
+          <div>
+            <span class="font-heading font-extrabold text-xl tracking-tight text-slate-900 block leading-none">
+              Bright<span class="text-dental-600">Smile</span>
+            </span>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 block mt-1">
+              Dental &amp; Implant Centre
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+          <a href="#services" class="hover:text-dental-600 transition">Treatments</a>
+          <a href="#doctor" class="hover:text-dental-600 transition">Meet the Doctor</a>
+          <a href="#gallery" class="hover:text-dental-600 transition">Clinic Gallery</a>
+          <a href="#reviews" class="hover:text-dental-600 transition">Patient Stories</a>
+          <a href="#location" class="hover:text-dental-600 transition">Location &amp; Hours</a>
+        </nav>
+
+        <!-- Desktop CTA Buttons -->
+        <div class="hidden md:flex items-center space-x-3">
+          <a href="#booking" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Book on WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" aria-label="Toggle Menu" class="p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+            <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+      <a href="#services" class="mobile-link block py-2.5 px-3 rounded-lg font-medium text-slate-700 hover:bg-dental-50 hover:text-dental-700">Treatments &amp; Services</a>
+      <a href="#doctor" class="mobile-link block py-2.5 px-3 rounded-lg font-medium text-slate-700 hover:bg-dental-50 hover:text-dental-700">Meet the Doctor</a>
+      <a href="#gallery" class="mobile-link block py-2.5 px-3 rounded-lg font-medium text-slate-700 hover:bg-dental-50 hover:text-dental-700">Clinic Photo Gallery</a>
+      <a href="#reviews" class="mobile-link block py-2.5 px-3 rounded-lg font-medium text-slate-700 hover:bg-dental-50 hover:text-dental-700">Patient Stories</a>
+      <a href="#location" class="mobile-link block py-2.5 px-3 rounded-lg font-medium text-slate-700 hover:bg-dental-50 hover:text-dental-700">Map &amp; Timings</a>
+      <div class="pt-2 flex flex-col gap-2.5">
+        <a href="tel:+919876543210" class="w-full py-3 rounded-xl border border-slate-300 text-slate-700 font-semibold text-center flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone text-dental-600"></i> Call Clinic Directly
+        </a>
+        <a href="#booking" class="mobile-link w-full py-3 rounded-xl bg-green-600 text-white font-semibold text-center flex items-center justify-center gap-2 shadow-sm">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Book Appointment on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       HERO SECTION
+       ===================================================================== -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-dental-50/70 via-white to-white pt-10 pb-20 lg:pt-16 lg:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Headline & CTAs -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dental-100/80 border border-dental-200 text-dental-800 text-xs sm:text-sm font-semibold">
+            <span class="w-2 h-2 rounded-full bg-dental-600 animate-ping"></span>
+            <span>Accepting New Patients &amp; Same-Day Emergency Visits</span>
+          </div>
+
+          <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Gentle, Modern &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-dental-600 to-medical-600">Painless Dental Care</span> For Your Family
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Experience stress-free dentistry equipped with digital X-rays, strict 4-step sterilization, and specialist care in Root Canals, Dental Implants, and Smile Designing.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#booking" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-dental-600 hover:bg-dental-700 text-white font-semibold px-7 py-4 rounded-2xl shadow-lg shadow-dental-600/25 hover:-translate-y-0.5 transition text-base">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Book Instant Appointment</span>
+            </a>
+            <a href="tel:+919876543210" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 font-semibold px-7 py-4 rounded-2xl shadow-sm transition text-base">
+              <i class="fa-solid fa-phone text-dental-600"></i>
+              <span>Call +91 98765 43210</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+            <div class="text-center lg:text-left">
+              <p class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">12+</p>
+              <p class="text-xs sm:text-sm text-slate-500 font-medium">Years Experience</p>
+            </div>
+            <div class="text-center lg:text-left border-x border-slate-200 px-4">
+              <p class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">8,500+</p>
+              <p class="text-xs sm:text-sm text-slate-500 font-medium">Happy Smiles</p>
+            </div>
+            <div class="text-center lg:text-left">
+              <p class="font-heading font-extrabold text-2xl sm:text-3xl text-dental-600">100%</p>
+              <p class="text-xs sm:text-sm text-slate-500 font-medium">Class-B Sterilized</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Hero Image & Floating Badge -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+            <!-- REPLACE HERO IMAGE HERE -->
+            <img 
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" 
+              alt="Modern Dental Clinic Chair and Equipment" 
+              onerror="this.src='https://placehold.co/800x600/0d9488/ffffff?text=BrightSmile+Dental+Clinic'"
+              class="w-full h-[380px] sm:h-[460px] object-cover object-center"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-green-100 text-green-700 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-shield-heart text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-900">Zero-Pain Anesthesia Protocol</p>
+                <p class="text-xs text-slate-600">rotary endodontics &amp; digital intraoral scanner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SERVICES / TREATMENTS SECTION
+       ===================================================================== -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-dental-600 font-bold text-xs uppercase tracking-widest bg-dental-50 px-3.5 py-1.5 rounded-full border border-dental-200">
+          Comprehensive Dental Care
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4">
+          Specialized Dental Treatments
+        </h2>
+        <p class="text-slate-600 mt-3 text-base sm:text-lg">
+          From routine ultrasonic scaling to full-mouth dental implants, we provide transparent pricing and personalized care under one roof.
+        </p>
+      </div>
+
+      <!-- 6-Card Responsive Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-dental-500/40 hover:shadow-xl transition group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-dental-100 text-dental-700 flex items-center justify-center text-2xl mb-6 group-hover:bg-dental-600 group-hover:text-white transition">
+              <i class="fa-solid fa-tooth"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">Painless Root Canal (RCT)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Single-sitting rotary root canal therapy using digital apex locators to save infected or decayed teeth without discomfort.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between text-xs font-semibold">
+            <span class="text-slate-500">Single-Sitting Available</span>
+            <a href="#booking" onclick="selectService('Root Canal Treatment (RCT)')" class="text-dental-600 hover:text-dental-800 flex items-center gap-1">
+              Book Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-dental-500/40 hover:shadow-xl transition group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-medical-100 text-medical-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-medical-600 group-hover:text-white transition">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">Dental Implants &amp; Crowns</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Permanent, natural-looking replacement for missing teeth using biocompatible titanium implants and metal-free Zirconia crowns.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between text-xs font-semibold">
+            <span class="text-slate-500">10-Year Crown Warranty</span>
+            <a href="#booking" onclick="selectService('Dental Implants & Crowns')" class="text-dental-600 hover:text-dental-800 flex items-center gap-1">
+              Book Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-dental-500/40 hover:shadow-xl transition group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-dental-100 text-dental-700 flex items-center justify-center text-2xl mb-6 group-hover:bg-dental-600 group-hover:text-white transition">
+              <i class="fa-solid fa-face-smile-beam"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">Braces &amp; Clear Aligners</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Correct crowded, crooked, or spaced teeth with metal braces, ceramic tooth-colored braces, or invisible removable aligners.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between text-xs font-semibold">
+            <span class="text-slate-500">Flexible Monthly Installments</span>
+            <a href="#booking" onclick="selectService('Braces & Clear Aligners')" class="text-dental-600 hover:text-dental-800 flex items-center gap-1">
+              Book Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-dental-500/40 hover:shadow-xl transition group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-medical-100 text-medical-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-medical-600 group-hover:text-white transition">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">Scaling, Polishing &amp; Whitening</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Ultrasonic plaque and tartar removal for bleeding gums, paired with safe LED laser teeth whitening for a brighter smile.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between text-xs font-semibold">
+            <span class="text-slate-500">30-Minute Quick Session</span>
+            <a href="#booking" onclick="selectService('Scaling & Teeth Whitening')" class="text-dental-600 hover:text-dental-800 flex items-center gap-1">
+              Book Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-dental-500/40 hover:shadow-xl transition group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-dental-100 text-dental-700 flex items-center justify-center text-2xl mb-6 group-hover:bg-dental-600 group-hover:text-white transition">
+              <i class="fa-solid fa-child-reaching"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">Kids &amp; Pediatric Dentistry</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Friendly, fear-free dental checkups for children, fluoride treatments, pit and fissure sealants, and painless milk-tooth care.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between text-xs font-semibold">
+            <span class="text-slate-500">Child-Friendly Environment</span>
+            <a href="#booking" onclick="selectService('Kids / Pediatric Dentistry')" class="text-dental-600 hover:text-dental-800 flex items-center gap-1">
+              Book Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-dental-500/40 hover:shadow-xl transition group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-medical-100 text-medical-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-medical-600 group-hover:text-white transition">
+              <i class="fa-solid fa-kit-medical"></i>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">Wisdom Tooth &amp; Oral Surgery</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Safe, atraumatic removal of impacted wisdom teeth, cysts, and damaged roots with minimal swelling and fast healing protocols.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between text-xs font-semibold">
+            <span class="text-slate-500">Digital X-Ray Included</span>
+            <a href="#booking" onclick="selectService('Wisdom Tooth Extraction')" class="text-dental-600 hover:text-dental-800 flex items-center gap-1">
+              Book Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       DOCTOR PROFILE SECTION (CUSTOMIZE DOCTOR DETAILS HERE)
+       ===================================================================== -->
+  <section id="doctor" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Doctor Photo Column -->
+        <div class="lg:col-span-5">
+          <div class="relative max-w-md mx-auto">
+            <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-dental-500 to-medical-500 opacity-30 blur-lg"></div>
+            <div class="relative rounded-3xl overflow-hidden border-2 border-slate-700 bg-slate-800">
+              <!-- REPLACE WITH ACTUAL DOCTOR IMAGE -->
+              <img 
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" 
+                alt="Dr. A. Sharma - Chief Dental Surgeon" 
+                onerror="this.src='https://placehold.co/600x700/134e4a/ffffff?text=Dr.+A.+Sharma+BDS+MDS'"
+                class="w-full h-[420px] object-cover object-top"
+              />
+              <div class="p-5 bg-slate-800/95 border-t border-slate-700 flex items-center justify-between">
+                <div>
+                  <p class="font-heading font-bold text-lg text-white">Dr. A. Sharma</p>
+                  <p class="text-xs text-dental-200">BDS, MDS (Prosthodontics &amp; Implantology)</p>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-dental-500/20 border border-dental-400/30 text-dental-200 text-xs font-semibold">
+                  DCI Reg: #A-14920
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Bio & Highlights Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-dental-200 font-semibold text-xs uppercase tracking-widest bg-dental-900/80 px-3.5 py-1.5 rounded-full border border-dental-700">
+            Meet Your Specialist
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold leading-tight">
+            Committed to Ethical, Patient-First Dentistry
+          </h2>
+          <p class="text-slate-300 leading-relaxed text-base">
+            With over 12 years of clinical experience in painless root canals, full-mouth rehabilitation, and aesthetic dentistry, <strong class="text-white">Dr. A. Sharma</strong> founded BrightSmile Dental Care with a simple mission: to remove the fear and anxiety associated with visiting the dentist.
+          </p>
+          <p class="text-slate-300 leading-relaxed text-base">
+            Every patient receives a transparent digital diagnosis on screen before any procedure begins—ensuring you understand your treatment options and costs clearly.
+          </p>
+
+          <!-- Credentials Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-slate-800/70 border border-slate-700/80 p-4 rounded-2xl flex items-start gap-3.5">
+              <i class="fa-solid fa-user-doctor text-dental-400 text-xl mt-1"></i>
+              <div>
+                <h4 class="font-bold text-sm text-white">Specialist Qualifications</h4>
+                <p class="text-xs text-slate-400 mt-1">MDS in Crown, Bridge &amp; Oral Implantology with Gold Medal honors.</p>
+              </div>
+            </div>
+            <div class="bg-slate-800/70 border border-slate-700/80 p-4 rounded-2xl flex items-start gap-3.5">
+              <i class="fa-solid fa-microscope text-dental-400 text-xl mt-1"></i>
+              <div>
+                <h4 class="font-bold text-sm text-white">Modern Digital Workflow</h4>
+                <p class="text-xs text-slate-400 mt-1">Low-radiation RVG digital X-rays and intraoral camera diagnostics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a href="#booking" class="inline-flex items-center gap-2 bg-dental-500 hover:bg-dental-600 text-white font-semibold px-6 py-3.5 rounded-xl transition shadow-lg shadow-dental-500/20">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Schedule Consultation with Dr. Sharma</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CLINIC PHOTO GALLERY SECTION (WITH CATEGORY FILTERS & LIGHTBOX)
+       ===================================================================== -->
+  <section id="gallery" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-dental-600 font-bold text-xs uppercase tracking-widest bg-dental-50 px-3.5 py-1.5 rounded-full border border-dental-200">
+          Inside Our Clinic
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4">
+          Hygienic, Modern &amp; Welcoming
+        </h2>
+        <p class="text-slate-600 mt-2 text-base">
+          Take a tour of our treatment suites, sterilization zone, and happy patient smiles. Click any photo to enlarge.
+        </p>
+      </div>
+
+      <!-- Category Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+        <button onclick="filterGallery('all')" class="gallery-btn active-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-dental-600 text-white shadow-sm transition" data-filter="all">
+          All Photos
+        </button>
+        <button onclick="filterGallery('interior')" class="gallery-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition" data-filter="interior">
+          Clinic Interior
+        </button>
+        <button onclick="filterGallery('equipment')" class="gallery-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition" data-filter="equipment">
+          Modern Equipment
+        </button>
+        <button onclick="filterGallery('smiles')" class="gallery-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition" data-filter="smiles">
+          Patient Smiles
+        </button>
+      </div>
+
+      <!-- Gallery Grid (Replace URLs with your local images/ folder photos) -->
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Photo 1 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white cursor-pointer" data-category="interior" onclick="openLightbox('https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1000&q=80', 'Main Dental Operatory Suite')">
+          <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80" alt="Main Dental Operatory Suite" onerror="this.src='https://placehold.co/600x400/0d9488/ffffff?text=Operatory+Suite'" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+            <div class="text-white">
+              <p class="font-bold text-sm">Main Dental Operatory Suite</p>
+              <p class="text-xs text-teal-200">Click to enlarge</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white cursor-pointer" data-category="equipment" onclick="openLightbox('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=80', 'Digital Diagnostics & Sterilization Tools')">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Digital Diagnostics & Sterilization Tools" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Sterilization+Unit'" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+            <div class="text-white">
+              <p class="font-bold text-sm">Digital Diagnostics &amp; Precision Tools</p>
+              <p class="text-xs text-teal-200">Click to enlarge</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white cursor-pointer" data-category="smiles" onclick="openLightbox('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80', 'Confident Smile After Cosmetic Alignment')">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Confident Smile After Cosmetic Alignment" onerror="this.src='https://placehold.co/600x400/0d9488/ffffff?text=Happy+Patient+Smile'" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+            <div class="text-white">
+              <p class="font-bold text-sm">Confident Smile Consultation</p>
+              <p class="text-xs text-teal-200">Click to enlarge</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white cursor-pointer" data-category="interior" onclick="openLightbox('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80', 'Patient Reception & Waiting Lounge')">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Patient Reception & Waiting Lounge" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Reception+Lounge'" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+            <div class="text-white">
+              <p class="font-bold text-sm">Calming Patient Reception &amp; Lounge</p>
+              <p class="text-xs text-teal-200">Click to enlarge</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white cursor-pointer" data-category="equipment" onclick="openLightbox('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80', 'Chairside Shade Matching & Veneers')">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Chairside Shade Matching" onerror="this.src='https://placehold.co/600x400/0d9488/ffffff?text=Shade+Matching'" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+            <div class="text-white">
+              <p class="font-bold text-sm">Precision Crown &amp; Veneer Shade Matching</p>
+              <p class="text-xs text-teal-200">Click to enlarge</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white cursor-pointer" data-category="smiles" onclick="openLightbox('https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1000&q=80', 'Pediatric & Family Checkup')">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Pediatric & Family Checkup" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Family+Checkup'" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+            <div class="text-white">
+              <p class="font-bold text-sm">Orthodontic &amp; Smile Design Care</p>
+              <p class="text-xs text-teal-200">Click to enlarge</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PATIENT TESTIMONIALS SECTION
+       ===================================================================== -->
+  <section id="reviews" class="py-16 bg-white border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-dental-600 font-bold text-xs uppercase tracking-widest bg-dental-50 px-3.5 py-1.5 rounded-full border border-dental-200">
+          4.9 ★ Google Rating
+        </span>
+        <h2 class="font-heading text-3xl font-extrabold text-slate-900 mt-3">
+          What Our Patients Say
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <div class="flex text-amber-400 text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 text-sm italic leading-relaxed mb-4">
+            "I was terrified of getting a root canal, but Dr. Sharma completed the entire procedure in a single sitting with zero pain. The clinic is spotless and very hygienic."
+          </p>
+          <p class="font-bold text-sm text-slate-900">— Sanatombi Devi</p>
+          <p class="text-xs text-slate-500">Root Canal &amp; Zirconia Crown</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <div class="flex text-amber-400 text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 text-sm italic leading-relaxed mb-4">
+            "Booked my appointment over WhatsApp and didn't have to wait at all. Got my wisdom tooth extracted smoothly and the post-care follow-up was wonderful."
+          </p>
+          <p class="font-bold text-sm text-slate-900">— R.K. Meiraba</p>
+          <p class="text-xs text-slate-500">Wisdom Tooth Extraction</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <div class="flex text-amber-400 text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 text-sm italic leading-relaxed mb-4">
+            "Brought my father for dental implants and my daughter for braces. Everything was explained clearly on the monitor before starting, and the charges are very reasonable."
+          </p>
+          <p class="font-bold text-sm text-slate-900">— Th. Joykumar Singh</p>
+          <p class="text-xs text-slate-500">Dental Implants &amp; Orthodontics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       BOOKING & LOCATION SECTION (WHATSAPP FORM + GOOGLE MAP)
+       ===================================================================== -->
+  <section id="booking" class="py-20 bg-gradient-to-b from-slate-50 to-dental-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Interactive WhatsApp Appointment Generator -->
+        <div class="lg:col-span-6 bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-10">
+          <div class="inline-flex items-center gap-2 text-green-700 bg-green-50 border border-green-200 px-3 py-1 rounded-full text-xs font-bold mb-3">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Instant Reception Desk Booking
+          </div>
+          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
+            Book Your Appointment
+          </h2>
+          <p class="text-slate-600 text-sm mt-1 mb-6">
+            Fill in your details below. Clicking submit will open WhatsApp with your pre-filled appointment request directly to our clinic reception.
+          </p>
+
+          <form id="whatsapp-form" onsubmit="sendToWhatsApp(event)" class="space-y-4">
+            <div>
+              <label for="patient-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Patient Full Name *</label>
+              <input type="text" id="patient-name" required placeholder="e.g., Rahul Ningthoujam" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-dental-600 focus:ring-2 focus:ring-dental-500/20 outline-none text-sm transition" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="patient-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Phone Number *</label>
+                <input type="tel" id="patient-phone" required placeholder="e.g., 9876543210" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-dental-600 focus:ring-2 focus:ring-dental-500/20 outline-none text-sm transition" />
+              </div>
+              <div>
+                <label for="preferred-date" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Preferred Date *</label>
+                <input type="date" id="preferred-date" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-dental-600 focus:ring-2 focus:ring-dental-500/20 outline-none text-sm transition" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="service-select" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Treatment Needed</label>
+                <select id="service-select" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-dental-600 focus:ring-2 focus:ring-dental-500/20 outline-none text-sm bg-white transition">
+                  <option value="General Checkup & Consultation">General Checkup &amp; Consultation</option>
+                  <option value="Root Canal Treatment (RCT)">Root Canal Treatment (RCT)</option>
+                  <option value="Scaling & Teeth Whitening">Scaling &amp; Teeth Whitening</option>
+                  <option value="Dental Implants & Crowns">Dental Implants &amp; Crowns</option>
+                  <option value="Braces & Clear Aligners">Braces &amp; Clear Aligners</option>
+                  <option value="Wisdom Tooth Extraction">Wisdom Tooth / Pain Relief</option>
+                  <option value="Kids / Pediatric Dentistry">Kids / Pediatric Dentistry</option>
+                </select>
+              </div>
+              <div>
+                <label for="time-slot" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Preferred Time</label>
+                <select id="time-slot" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-dental-600 focus:ring-2 focus:ring-dental-500/20 outline-none text-sm bg-white transition">
+                  <option value="Morning (9:30 AM - 12:30 PM)">Morning (9:30 AM - 12:30 PM)</option>
+                  <option value="Afternoon (1:00 PM - 4:00 PM)">Afternoon (1:00 PM - 4:00 PM)</option>
+                  <option value="Evening (4:00 PM - 7:30 PM)">Evening (4:00 PM - 7:30 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="patient-notes" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Symptoms or Notes (Optional)</label>
+              <textarea id="patient-notes" rows="2" placeholder="Briefly mention toothache, sensitivity, or questions..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-dental-600 focus:ring-2 focus:ring-dental-500/20 outline-none text-sm transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold text-base shadow-lg shadow-green-600/25 flex items-center justify-center gap-2.5 transition cursor-pointer">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Send Booking Request via WhatsApp</span>
+            </button>
+
+            <!-- Confirmation Message Banner (No alert() used) -->
+            <div id="booking-feedback" class="hidden p-3.5 rounded-xl bg-dental-50 border border-dental-200 text-dental-800 text-xs font-medium text-center">
+              Opening WhatsApp with your appointment details...
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Column: Location Info, Hours & Embedded Google Map -->
+        <div id="location" class="lg:col-span-6 space-y-6">
+          <div class="bg-white rounded-3xl shadow-md border border-slate-200/80 p-6 sm:p-8">
+            <h3 class="font-heading text-2xl font-extrabold text-slate-900 mb-4">
+              Clinic Location &amp; Visiting Hours
+            </h3>
+
+            <div class="space-y-4 text-sm">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-dental-100 text-dental-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-900">BrightSmile Dental Care &amp; Implant Centre</p>
+                  <p class="text-slate-600">1st Floor, City Medical Complex, Main Road, Canchipur, Imphal, Manipur – 795003</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-dental-100 text-dental-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <i class="fa-regular fa-clock text-lg"></i>
+                </div>
+                <div class="w-full">
+                  <p class="font-bold text-slate-900 mb-1">OPD Timings</p>
+                  <div class="grid grid-cols-2 gap-y-1 text-slate-600 text-xs sm:text-sm">
+                    <span>Monday – Saturday:</span>
+                    <span class="font-semibold text-slate-900">9:30 AM – 7:30 PM</span>
+                    <span>Sunday:</span>
+                    <span class="font-semibold text-dental-700">10:00 AM – 2:00 PM (Prior Booking)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Embedded Google Map (Replace src with Client's Google Map Embed Link) -->
+            <div class="mt-6 rounded-2xl overflow-hidden border border-slate-200 shadow-inner h-64 sm:h-72 bg-slate-100">
+              <iframe 
+                title="BrightSmile Dental Clinic Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14489.696712352354!2d93.928871!3d24.752528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3749264692f39a1b%3A0x98f79e2c115f0c14!2sManipur%20University!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER SECTION
+       ===================================================================== -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-dental-600 flex items-center justify-center text-white">
+            <i class="fa-solid fa-tooth"></i>
+          </div>
+          <span class="font-heading font-bold text-white text-lg">BrightSmile Dental Care</span>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+          <a href="#services" class="hover:text-white transition">Treatments</a>
+          <a href="#doctor" class="hover:text-white transition">Doctor Profile</a>
+          <a href="#gallery" class="hover:text-white transition">Clinic Gallery</a>
+          <a href="#booking" class="hover:text-white transition">Book Appointment</a>
+        </div>
+
+        <div class="text-xs text-center md:text-right">
+          <p>&copy; 2026 BrightSmile Dental Care. All rights reserved.</p>
+          <p class="text-slate-500 mt-1">Designed &amp; Developed by <span class="text-dental-400 font-medium">Goutam Elangbam</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       LIGHTBOX MODAL FOR GALLERY PHOTOS
+       ===================================================================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-4xl w-full bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-700" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" aria-label="Close Preview" class="absolute top-3 right-3 w-10 h-10 rounded-full bg-slate-800/80 text-white hover:bg-red-600 transition flex items-center justify-center z-10">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="Enlarged Clinic View" class="w-full max-h-[75vh] object-contain bg-black" />
+      <div class="p-4 bg-slate-900 text-center">
+        <p id="lightbox-caption" class="text-white font-semibold text-sm sm:text-base"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       FLOATING WHATSAPP QUICK-CHAT BUTTON
+       ===================================================================== -->
+  <a 
+    href="https://wa.me/919876543210?text=Hello%20BrightSmile%20Dental%20Clinic,%20I%20would%20like%20to%20inquire%20about%20an%20appointment." 
+    target="_blank" 
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-xl whatsapp-pulse transition"
+  >
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- =====================================================================
+       CLIENT-SIDE JAVASCRIPT (CONFIGURATION & INTERACTIVITY)
+       ===================================================================== -->
+  <script>
+    // 1. CHANGE THIS NUMBER TO YOUR CLIENT'S WHATSAPP NUMBER (Include Country Code 91 without '+')
+    const CLINIC_WHATSAPP_NUMBER = "919876543210";
+
+    // Set default date picker minimum to today's date
+    document.addEventListener("DOMContentLoaded", () => {
+      const dateInput = document.getElementById("preferred-date");
+      if (dateInput) {
+        const today = new Date().toISOString().split("T")[0];
+        dateInput.min = today;
+        dateInput.value = today;
+      }
+    });
+
+    // 2. Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    mobileMenuBtn.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      if (isHidden) {
+        mobileMenu.classList.remove("hidden");
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+      } else {
+        mobileMenu.classList.add("hidden");
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+      }
+    });
+
+    // Close mobile menu automatically when a link is clicked
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+      });
+    });
+
+    // 3. Pre-select service in form when clicking "Book Now" on any service card
+    function selectService(serviceName) {
+      const selectEl = document.getElementById("service-select");
+      if (selectEl) {
+        selectEl.value = serviceName;
+      }
+    }
+
+    // 4. Filter Photo Gallery by Category
+    function filterGallery(category) {
+      const items = document.querySelectorAll(".gallery-item");
+      const buttons = document.querySelectorAll(".gallery-btn");
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute("data-filter") === category) {
+          btn.className = "gallery-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-dental-600 text-white shadow-sm transition";
+        } else {
+          btn.className = "gallery-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition";
+        }
+      });
+
+      items.forEach(item => {
+        const itemCat = item.getAttribute("data-category");
+        if (category === "all" || itemCat === category) {
+          item.classList.remove("hidden");
+        } else {
+          item.classList.add("hidden");
+        }
+      });
+    }
+
+    // 5. Lightbox Modal Functions
+    function openLightbox(imgUrl, captionText) {
+      const modal = document.getElementById("lightbox-modal");
+      const img = document.getElementById("lightbox-img");
+      const caption = document.getElementById("lightbox-caption");
+
+      img.src = imgUrl;
+      caption.textContent = captionText;
+      modal.classList.remove("hidden");
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById("lightbox-modal");
+      modal.classList.add("hidden");
+    }
+
+    // 6. Construct & Open WhatsApp Booking Link
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("patient-name").value.trim();
+      const phone = document.getElementById("patient-phone").value.trim();
+      const date = document.getElementById("preferred-date").value;
+      const service = document.getElementById("service-select").value;
+      const timeSlot = document.getElementById("time-slot").value;
+      const notes = document.getElementById("patient-notes").value.trim();
+
+      const messageLines = [
+        "Hello *BrightSmile Dental Care*, I would like to book an appointment:",
+        "",
+        `*Patient Name:* ${name}`,
+        `*Phone:* ${phone}`,
+        `*Treatment:* ${service}`,
+        `*Preferred Date:* ${date}`,
+        `*Preferred Time:* ${timeSlot}`
+      ];
+
+      if (notes) {
+        messageLines.push(`*Notes:* ${notes}`);
+      }
+
+      const encodedMessage = encodeURIComponent(messageLines.join("\n"));
+      const whatsappUrl = `https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+      const feedback = document.getElementById("booking-feedback");
+      feedback.classList.remove("hidden");
+
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    }
+  </script>
+</body>
+</html>
